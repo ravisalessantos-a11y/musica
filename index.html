@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmonia & Som | O Mundo dos Instrumentos Musicais</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar" id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-compact-disc spin-icon"></i>
+                <span>Harmonia<strong>&Som</strong></span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Início</a></li>
+                    <li><a href="#categorias" class="nav-link">Categorias</a></li>
+                    <li><a href="#instrumentos" class="nav-link">Instrumentos</a></li>
+                    <li><a href="#estudio" class="nav-link">Estúdio Virtual</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="btn btn-icon" id="theme-toggle" aria-label="Alternar Tema">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Abrir Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="badge">Sinta o Ritmo</span>
+            <h1 class="hero-title">A Arte & A Ciência da <span>Música</span></h1>
+            <p class="hero-subtitle">Explore famílias de instrumentos, descubra novas sonoridades e experimente o nosso teclado virtual interativo.</p>
+            <div class="hero-buttons">
+                <a href="#instrumentos" class="btn btn-primary">Explorar Instrumentos <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#estudio" class="btn btn-secondary"><i class="fa-solid fa-play"></i> Testar Sons</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container stats-grid">
+            <div class="stat-card">
+                <i class="fa-solid fa-guitar"></i>
+                <h3>4 Grandes</h3>
+                <p>Famílias de Instrumentos</p>
+            </div>
+            <div class="stat-card">
+                <i class="fa-solid fa-music"></i>
+                <h3>+100</h3>
+                <p>Anos de História Musical</p>
+            </div>
+            <div class="stat-card">
+                <i class="fa-solid fa-sliders"></i>
+                <h3>100%</h3>
+                <p>Interatividade Web</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories section-padding" id="categorias">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">Famílias Sonoras</span>
+                <h2>Categorias Principais</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-card" data-category="cordas">
+                    <div class="card-icon"><i class="fa-solid fa-guitar"></i></div>
+                    <h3>Cordas</h3>
+                    <p>Vibração de cordas tensionadas produzindo notas ricas e envolventes.</p>
+                    <button class="btn-text filter-btn" data-filter="cordas">Ver Instrumentos <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="category-card" data-category="sopro">
+                    <div class="card-icon"><i class="fa-solid fa-wind"></i></div>
+                    <h3>Sopro</h3>
+                    <p>O ar em movimento gerando melodias através de tubos de madeira ou metal.</p>
+                    <button class="btn-text filter-btn" data-filter="sopro">Ver Instrumentos <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="category-card" data-category="percussao">
+                    <div class="card-icon"><i class="fa-solid fa-drum"></i></div>
+                    <h3>Percussão</h3>
+                    <p>A base do ritmo, batidas envolventes e ressonâncias impactantes.</p>
+                    <button class="btn-text filter-btn" data-filter="percussao">Ver Instrumentos <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="category-card" data-category="teclas">
+                    <div class="card-icon"><i class="fa-solid fa-keyboard"></i></div>
+                    <h3>Teclas & Eletrônicos</h3>
+                    <p>Versatilidade harmônica e timbres modernos impulsionados pela tecnologia.</p>
+                    <button class="btn-text filter-btn" data-filter="teclas">Ver Instrumentos <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="instruments section-padding" id="instrumentos">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">Coleção</span>
+                <h2>Vitrine de Instrumentos</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="filter-controls">
+                <button class="filter-tag active" data-filter="all">Todos</button>
+                <button class="filter-tag" data-filter="cordas">Cordas</button>
+                <button class="filter-tag" data-filter="sopro">Sopro</button>
+                <button class="filter-tag" data-filter="percussao">Percussão</button>
+                <button class="filter-tag" data-filter="teclas">Teclas</button>
+            </div>
+
+            <div class="instruments-grid">
+                <article class="instrument-card" data-category="cordas">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=600&q=80" alt="Violão Acústico">
+                        <span class="tag">Cordas</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Violão Acústico</h3>
+                        <p>Instrumento versátil de cordas dedilhadas, essencial na música popular e erudita.</p>
+                        <div class="card-footer">
+                            <button class="btn btn-outline btn-sm play-sample" data-sound="violao">
+                                <i class="fa-solid fa-volume-high"></i> Ouvir Som
+                            </button>
+                            <button class="btn btn-link modal-trigger" data-modal="modal-violao">Detalhes</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="instrument-card" data-category="teclas">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=600&q=80" alt="Piano de Cauda">
+                        <span class="tag">Teclas</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Piano de Cauda</h3>
+                        <p>Conhecido pelo alcance dinâmico impecável e timbres profundos e harmoniosos.</p>
+                        <div class="card-footer">
+                            <button class="btn btn-outline btn-sm play-sample" data-sound="piano">
+                                <i class="fa-solid fa-volume-high"></i> Ouvir Som
+                            </button>
+                            <button class="btn btn-link modal-trigger" data-modal="modal-piano">Detalhes</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="instrument-card" data-category="percussao">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=600&q=80" alt="Bateria Acústica">
+                        <span class="tag">Percussão</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Bateria Acústica</h3>
+                        <p>Conjunto de tambores e pratos que ditam o ritmo e a energia em apresentações ao vivo.</p>
+                        <div class="card-footer">
+                            <button class="btn btn-outline btn-sm play-sample" data-sound="bateria">
+                                <i class="fa-solid fa-volume-high"></i> Ouvir Som
+                            </button>
+                            <button class="btn btn-link modal-trigger" data-modal="modal-bateria">Detalhes</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="instrument-card" data-category="sopro">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1573871666457-7c7329118cf9?auto=format&fit=crop&w=600&q=80" alt="Saxofone Alto">
+                        <span class="tag">Sopro</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Saxofone Alto</h3>
+                        <p>Timbres marcantes e expressivos, um pilar fundamental no Jazz e no Blues.</p>
+                        <div class="card-footer">
+                            <button class="btn btn-outline btn-sm play-sample" data-sound="sax">
+                                <i class="fa-solid fa-volume-high"></i> Ouvir Som
+                            </button>
+                            <button class="btn btn-link modal-trigger" data-modal="modal-sax">Detalhes</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="studio section-padding" id="estudio">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">Interativo</span>
+                <h2>Estúdio de Som Web</h2>
+                <p>Clique nas teclas abaixo ou use o teclado do seu computador para produzir notas!</p>
+                <div class="divider"></div>
+            </div>
+
+            <div class="virtual-keyboard-container">
+                <div class="keyboard-controls">
+                    <label for="volume-control"><i class="fa-solid fa-volume-low"></i> Volume:</label>
+                    <input type="range" id="volume-control" min="0" max="1" step="0.1" value="0.7">
+                </div>
+
+                <div class="piano-keys" id="piano-keys">
+                    <button class="key white-key" data-note="C4"><span>Do (C)</span></button>
+                    <button class="key black-key" data-note="C#4"><span>C#</span></button>
+                    <button class="key white-key" data-note="D4"><span>Re (D)</span></button>
+                    <button class="key black-key" data-note="D#4"><span>D#</span></button>
+                    <button class="key white-key" data-note="E4"><span>Mi (E)</span></button>
+                    <button class="key white-key" data-note="F4"><span>Fa (F)</span></button>
+                    <button class="key black-key" data-note="F#4"><span>F#</span></button>
+                    <button class="key white-key" data-note="G4"><span>Sol (G)</span></button>
+                    <button class="key black-key" data-note="G#4"><span>G#</span></button>
+                    <button class="key white-key" data-note="A4"><span>La (A)</span></button>
+                    <button class="key black-key" data-note="A#4"><span>A#</span></button>
+                    <button class="key white-key" data-note="B4"><span>Si (B)</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact section-padding" id="contato">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Entre em Contato</h2>
+                    <p>Dúvidas, sugestões de instrumentos ou colaborações? Mande uma mensagem!</p>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-envelope"></i> contato@harmoniaesom.com</li>
+                        <li><i class="fa-solid fa-location-dot"></i> Brasil</li>
+                    </ul>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" placeholder="Seu nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="seuemail@exemplo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" rows="4" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Enviar Mensagem <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Harmonia & Som. Desenvolvido para GitHub Pages.</p>
+            <div class="social-links">
+                <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
